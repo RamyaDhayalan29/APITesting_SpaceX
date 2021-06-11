@@ -1,0 +1,27 @@
+Test 1:
+
+pm.test("Status code is 200", function () {
+
+pm.response.to.have.status(200);
+
+});
+
+
+Test 2:
+
+pm.test("Content-Type is present", function () {
+
+pm.response.to.have.header("Content-Type")
+
+});
+
+
+Test 3:
+
+pm.test("Verify Name", function () {
+
+var jsonData = pm.response.json();
+
+pm.expect(jsonData.name).to.eql("SXM-8");
+
+});
